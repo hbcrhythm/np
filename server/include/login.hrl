@@ -1,0 +1,1 @@
+-record(state, {socket, account, id, pid, acceptor, cmd = 0, status = 0, role_ids = []}).-define(NAME_MIN_LEN, 4).-define(NAME_MAX_LEN, 16).

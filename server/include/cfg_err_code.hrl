@@ -1,0 +1,5 @@
+-define(ERR_NAME_IS_TOO_SHORT, 1).
+-define(ERR_NAME_IS_TOO_LONG, 2).
+-define(ERR_NAME_IS_NOT_VERIFY, 3).
+-define(ERR_NAME_IS_USED, 4).
+-define(ERR_CREATE_ACCOUNT_FAIL, 5).

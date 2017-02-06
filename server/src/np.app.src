@@ -1,0 +1,29 @@
+{application, np,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, {np_app, []}},
+  {env, [
+        {agent_name, "NP"},
+        {game_name, "HHZ"},
+        {server_id, 1},
+        {cookie, "np"},
+        {game_type, game},
+        {ip, "127.0.0.1"},
+        {port, 6215},
+        {auth, {true, "np_2016"}},
+        {robot_num, 2},
+        {mysql, [{size      ,   100},
+                {user       ,   "root"},
+                {password   ,   "root"},
+                {host       ,   "127.0.0.1"},
+                {port       ,   3306},
+                {database   ,   "np"},
+                {encoding   ,   utf8}]}
+        ]}
+ ]}.
