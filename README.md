@@ -1,2 +1,2 @@
 # np
-game server for erlang
+Game server for erlang
