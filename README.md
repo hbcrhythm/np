@@ -30,3 +30,8 @@ Game server for erlang
 	1> h5 game client https://github.com/hbcrhythm/EgretGameEngine
 	2> web     server https://github.com/hbcrhythm/Vue-cnodejs
 	目前还没完成，但3方通信是已经可以。
+
+联系我们
+=======
+	1>  email: labihbc@gmail.com 
+	2>  qq 	 : 670762853@qq.com
