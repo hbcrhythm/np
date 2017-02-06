@@ -1,0 +1,9 @@
+error id	server maroc define	error message
+id	macro	msg
+1	0	1
+0	0	0
+1	ERR_NAME_IS_TOO_SHORT	名字长度过短
+2	ERR_NAME_IS_TOO_LONG	名字长度过长
+3	ERR_NAME_IS_NOT_VERIFY	名字不能包含非法字符
+4	ERR_NAME_IS_USED	该名字已被使用
+5	ERR_CREATE_ACCOUNT_FAIL	创建账号失败
