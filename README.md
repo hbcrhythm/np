@@ -24,3 +24,8 @@ Game server for erlang
 	3> 这两个文件的内容会根据../proto 里面的内容的模块内容的改变而改变,改变是覆盖形式的,既覆盖旧的对应模块的数据。
 	4> parse.erl 和unparse.erl 两个文件和文件的前缀内容是项目编译的时候生成的, 如果你删除了文件的前缀内容,并没有删除文件,那这样是会报错的,你必须连文件也一起删掉,下一次编译才会重新生成。
 	5> 你也可以删除proto文件夹下面的bak文件，这样文件的“协议”内容会重新刷新一次(不包括前缀内容和文件).
+
+5、关联demo
+	1> h5 game client https://github.com/hbcrhythm/EgretGameEngine
+	2> web     server https://github.com/hbcrhythm/Vue-cnodejs
+	目前还没完成，但3方通信是已经可以。
