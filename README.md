@@ -26,6 +26,7 @@ Game server for erlang
 	5> 你也可以删除proto文件夹下面的bak文件，这样文件的“协议”内容会重新刷新一次(不包括前缀内容和文件).
 
 5、关联demo
+-----
 	1> h5 game client https://github.com/hbcrhythm/EgretGameEngine
 	2> web     server https://github.com/hbcrhythm/Vue-cnodejs
 	目前还没完成，但3方通信是已经可以。
