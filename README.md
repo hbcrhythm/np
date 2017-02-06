@@ -1,4 +1,5 @@
-# np
+np
+=======
 Game server for erlang
 
 1、字节流说明
