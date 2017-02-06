@@ -1,0 +1,44 @@
+//pt_no	: 20001
+message    request_hehe {
+    required string name = 1;
+    required string address = 2;
+    required string phone_number = 3;
+    repeated int32 age = 4;
+}
+//pt_no : 20001
+message    return_hehe {
+    required string name = 1;
+    required string address = 2;
+    required string phone_number = 3;
+    repeated int32 age = 4;
+}
+
+//pt_no:20002 
+message  request_ioio  {
+    required string name = 1;
+    required string address = 2;
+    required string phone_number = 3;
+    repeated int32 age = 4;
+}
+//pt_no:20002 
+message  return_ioio  {
+    required string name = 1;
+    required string address = 2;
+    required string phone_number = 3;
+    repeated int32 age = 4;
+}
+
+//pt_no:20003
+message request_jujuij {
+    required string name = 1;
+    required string address = 2;
+    required string phone_number = 3;
+    repeated int32 age = 4;
+}
+//pt_no:20003
+message return_jujuij {
+    required string name = 1;
+    required string address = 2;
+    required string phone_number = 3;
+    repeated int32 age = 4;
+}

@@ -1,0 +1,7 @@
+//错误码提示
+//pt_no :10101
+message return_tips{
+	optional int32  tips_code = 1; //提示码
+	optional string tips_text = 2; //提示文本
+	optional string args	  = 3; //附带参数
+}

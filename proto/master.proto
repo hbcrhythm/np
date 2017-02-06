@@ -1,0 +1,44 @@
+//pt_no	: 50001
+message    request_master {
+    required string name = 1;
+    required string address = 2;
+    required string phone_number = 3;
+    repeated int32 age = 4;
+}
+//pt_no : 50001
+message    return_master {
+    required string name = 1;
+    required string address = 2;
+    required string phone_number = 3;
+    repeated int32 age = 4;
+}
+
+//pt_no:50002 
+message  request_master_one  {
+    required string name = 1;
+    required string address = 2;
+    required string phone_number = 3;
+    repeated int32 age = 4;
+}
+//pt_no:50002 
+message  return_master_one  {
+    required string name = 1;
+    required string address = 2;
+    required string phone_number = 3;
+    repeated int32 age = 4;
+}
+
+//pt_no:50003
+message request_master_two {
+    required string name = 1;
+    required string address = 2;
+    required string phone_number = 3;
+    repeated int32 age = 4;
+}
+//pt_no:50003
+message return_master_two {
+    required string name = 1;
+    required string address = 2;
+    required string phone_number = 3;
+    repeated int32 age = 4;
+}

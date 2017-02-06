@@ -1,0 +1,50 @@
+//pt_no	:30001
+message request_busy1
+{
+    required string name = 1;
+    required string address = 2;
+    required string phone_number = 3;
+    repeated int32 age = 4;
+}
+
+//pt_no :30001
+message return_busy1
+{
+    required string name = 1;
+    required string address = 2;
+    required string phone_number = 3;
+    repeated int32 age = 4;
+}
+
+     //	pt_no:30002
+ message	request_person_busy2                       {
+    required string name = 1;
+    required string address = 2;
+    required string phone_number = 3;
+    repeated int32 age = 4;
+}
+
+     // pt_no:30002
+ message    return_person_busy2                      {
+    required string name = 1;
+    required string address = 2;
+    required string phone_number = 3;
+    repeated int32 age = 4;
+}
+
+
+//pt_no:30003
+message request_busy_jnl {
+    required string name = 1;
+    required string address = 2;
+    required string phone_number = 3;
+    repeated int32 age = 4;
+}
+
+//pt_no:30003
+message return_busy_jnl {
+    required string name = 1;
+    required string address = 2;
+    required string phone_number = 3;
+    repeated int32 age = 4;
+}

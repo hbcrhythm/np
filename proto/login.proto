@@ -1,0 +1,42 @@
+//登录游戏
+//pt_no	:10001
+message request_login{
+    required string account      = 1[default=""];   //账号
+    required int32  timestamp    = 2[default=0];   //时间戳
+    required string sign         = 3[default=""];   //签名
+    required int32  platform_id  = 4[default=0];   //平台id
+    required string device_no    = 5[default=""];   //设备号
+    required string channel_id   = 6[default=""];   //渠道id
+    required string version      = 7[default=""];   //客户端版本
+    required string ext          = 8[default=""];   //扩展参数
+}
+
+
+//pt_no:10001
+message return_login{
+    repeated roles list         = 1;   //角色列表
+}
+
+//创建角色
+//pt_no:10002
+message request_create{
+    required string name        = 1;    //角色名
+    required bytes  career      = 2;    //角色职业
+    required bytes  sex         = 3;    //角色性别
+}
+
+
+//进入游戏
+//pt_no:10003
+message request_enter{
+    required int32 role_id      = 1;    //角色id
+}
+
+message roles{
+    required int32  role_id      = 1; //角色id
+    required string role_name    = 2; //名字
+    required bytes  career       = 3; //职业
+    required bytes  sex          = 4; //性别
+    required bytes  level        = 5; //等级
+}
+
