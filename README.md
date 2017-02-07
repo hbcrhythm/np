@@ -34,4 +34,4 @@ Game server for erlang
 联系我们
 =======
 	1>  email: labihbc@gmail.com 
-	2>  qq 	 : 670762853@qq.com
+	2>  qq 	 : 670762853

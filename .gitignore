@@ -1,0 +1,25 @@
+# rebar:
+server/.rebar/*
+
+# tags:
+server/.tags*
+
+# cfg:
+server/cfg/*
+
+# ebin:
+server/ebin/*
+
+# deps:
+server/deps/*
+
+# log:
+server/log/*
+
+# proto:
+server/proto/*
+
+# other:
+server/erl_crash.dump
+server/hbc*
+server/rebar
