@@ -8,6 +8,8 @@ start() ->
 	Dispatch = cowboy_router:compile([
     {'_', [
       {"/", ws_main_handle, []},
+      {"/rl", ws_rl_handle, []},
+      {"/sl", ws_sl_handle, []},
       {"/ws/[...]", ws_handle, []}
     	]}
     ]),

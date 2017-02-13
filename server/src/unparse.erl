@@ -1,6 +1,12 @@
 -module(unparse).
 -export([unparse/2]).
 
+%%start login
+unparse(server, 10001) -> [{module_pb, login_pb}, {module_logic, ph_login}, {function, decode_request_login}];
+unparse(client, 10001) -> [{module_pb, login_pb}, {module_logic, ph_login}, {function, decode_return_login}];
+unparse(server, 10002) -> [{module_pb, login_pb}, {module_logic, ph_login}, {function, decode_request_create}];
+unparse(server, 10003) -> [{module_pb, login_pb}, {module_logic, ph_login}, {function, decode_request_enter}];
+%%end login
 %%start busy
 unparse(server, 30001) -> [{module_pb, busy_pb}, {module_logic, ph_busy}, {function, decode_request_busy1}];
 unparse(client, 30001) -> [{module_pb, busy_pb}, {module_logic, ph_busy}, {function, decode_return_busy1}];
@@ -20,12 +26,6 @@ unparse(client, 20002) -> [{module_pb, cooke_pb}, {module_logic, ph_cooke}, {fun
 unparse(server, 20003) -> [{module_pb, cooke_pb}, {module_logic, ph_cooke}, {function, decode_request_jujuij}];
 unparse(client, 20003) -> [{module_pb, cooke_pb}, {module_logic, ph_cooke}, {function, decode_return_jujuij}];
 %%end cooke
-%%start login
-unparse(server, 10001) -> [{module_pb, login_pb}, {module_logic, ph_login}, {function, decode_request_login}];
-unparse(client, 10001) -> [{module_pb, login_pb}, {module_logic, ph_login}, {function, decode_return_login}];
-unparse(server, 10002) -> [{module_pb, login_pb}, {module_logic, ph_login}, {function, decode_request_create}];
-unparse(server, 10003) -> [{module_pb, login_pb}, {module_logic, ph_login}, {function, decode_request_enter}];
-%%end login
 %%start master
 unparse(server, 50001) -> [{module_pb, master_pb}, {module_logic, ph_master}, {function, decode_request_master}];
 unparse(client, 50001) -> [{module_pb, master_pb}, {module_logic, ph_master}, {function, decode_return_master}];

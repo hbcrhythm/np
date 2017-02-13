@@ -9,15 +9,27 @@
 	header("Content-type: text/html; charset=utf-8");	
 	define('ID', 	"id");			//服务端宏输出文件的value 字段
 	define('MACRO', "macro");		//服务端宏输出文件的key 字段
+	define('CFG_DIR', "../cfg");
+	define('INCLUDE_DIR', "../include");
+	define('cfg_hrl', "cfg_hrl.hrl");
 
-	$cfgFile = $argv[1]; //eg：cfg_buff
-	$erlFile = $argv[2]; //eg: cfg.erl
+
+	$cfgFile  = $argv[1]; //eg：cfg_buff
+	$erlFile  = $argv[2]; //eg: cfg.erl
 	$xlsxFile = $argv[3];//eg: cfg.xlsx
 	$macroTag = $argv[4];
-	define('cfg_hrl', "cfg_hrl.hrl");
+	create_dir();
 	$parseData = parse_data($cfgFile, $erlFile, $xlsxFile, "server");
 	$parseData != false && output_file($cfgFile, $parseData);
 	!empty($macroTag) && generate_macro($cfgFile, $xlsxFile); 
+
+	/**
+	 * 构造项目需要的目录
+	 * @return [type] [description]
+	 */
+	function create_dir(){
+		!is_dir(CFG_DIR) ? mkdir(CFG_DIR, 0777, true) : null;
+	}
 	/**
 	 * 解析相应的配置到客服端/服务端
 	 * @param  [type] $cfgFile  [配置文件名(不包括后缀)]
@@ -69,7 +81,7 @@
 		}
 		$outputString .= "get(_) -> undefined.";
 		$fix = "-module({$cfgFile}).\n-include(\"cfg_hrl.hrl\").\n\n-export([get/1]).\n\n";
-		file_put_contents("../cfg/{$cfgFile}.erl", $fix.$outputString);
+		file_put_contents(CFG_DIR."/{$cfgFile}.erl", $fix.$outputString);
 	}
 
 	/**
@@ -86,9 +98,9 @@
 			$record .= trim($data[$i]).", ";
 		}
 		$record = rtrim($record, ", ")."}).\n";
-		$content = file_get_contents("../include/cfg_hrl.hrl");
+		$content = file_get_contents(INCLUDE_DIR."/cfg_hrl.hrl");
 		$newContent = trim(preg_replace("/-record\(".$cfgFile.",.*}\)./", "", $content));
-		file_put_contents("../include/".cfg_hrl, $newContent."\n".$record);
+		file_put_contents(INCLUDE_DIR."/".cfg_hrl, $newContent."\n".$record);
 	}
 
 	/**
@@ -109,5 +121,5 @@
 			$val = "-define(".$line_arrays[$macro].", $line_arrays[$id]).\n";
 			$content .= $val;
 		}
-		file_put_contents("../include/{$cfgFile}.hrl", $content);
+		file_put_contents(INCLUDE_DIR."/{$cfgFile}.hrl", $content);
 	}

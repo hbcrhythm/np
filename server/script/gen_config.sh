@@ -80,6 +80,7 @@ make_proto(){
 			parse = parse "../src/lib_" arr[i] ".erl " "../src/ph_" arr[i] ".erl " "../proto/" arr[i] ".bak : ../../proto/" arr[i] ".proto\n"
 			parse = parse "\t@$(shell touch ../proto/" arr[i] ".bak)\n"
 			parse = parse "\t@(php ../php/parse_pt.php "arr[i]")\n"
+			echo "erl -noshell -pa ../deps/protobuffs/ebin -eval \" protobuffs_compile:scan_file(\\\"../../proto/\\\" ++ \\\""arr[i]".proto\\\", [{output_include_dir, \\\"../include\\\"}, {output_ebin_dir,\\\"../ebin\\\"}]). \" -s erlang halt)" 
 			string = string "\t@(erl -noshell -pa ../deps/protobuffs/ebin -eval \" protobuffs_compile:scan_file(\\\"../../proto/\\\" ++ \\\""arr[i]".proto\\\", [{output_include_dir, \\\"../include\\\"}, {output_ebin_dir,\\\"../ebin\\\"}]). \" -s erlang halt) \n\n"
 		}
 		parse = parse "../proto/undefined.bak : \n"

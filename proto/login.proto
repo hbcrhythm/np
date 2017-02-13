@@ -1,5 +1,5 @@
 //登录游戏
-//pt_no	:10001
+//pt_no:10001
 message request_login{
     required string account      = 1[default=""];   //账号
     required int32  timestamp    = 2[default=0];   //时间戳
@@ -10,7 +10,6 @@ message request_login{
     required string version      = 7[default=""];   //客户端版本
     required string ext          = 8[default=""];   //扩展参数
 }
-
 
 //pt_no:10001
 message return_login{
@@ -39,4 +38,3 @@ message roles{
     required bytes  sex          = 4; //性别
     required bytes  level        = 5; //等级
 }
-
