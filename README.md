@@ -27,9 +27,8 @@ Game server for erlang
 
 5、关联demo
 -----
-	1> h5 game client https://github.com/hbcrhythm/EgretGameEngine
-	2> web     server https://github.com/hbcrhythm/Vue-cnodejs
-	目前还没完成，但3方通信是已经可以。
+	1> h5 game client https://github.com/hbcrhythm/EgretGameEngine (持续更新中...)
+	2> web     server https://github.com/hbcrhythm/Vue-cnodejs (架构已搭建完成) 
 
 联系我们
 =======
